@@ -9,10 +9,46 @@ body, h1, h2, h3, p, ul, li, a {
 body {
   font-family: Arial, sans-serif;
   color: #fff;
-  background: linear-gradient(135deg, #ff7eb3, #8e44ad, #3498db);
+  background: linear-gradient(135deg, #0c1b80, #8e44ad, #1049a5);
   background-size: 400% 400%;
-  animation: backgroundAnimation 20s ease infinite;
+  animation: backgroundAnimation 10s ease infinite;
   line-height: 1.6;
+  position: relative;
+}
+
+/* Background Design */
+.home .background-decor .circle {
+  z-index: 10;
+  /* top: 0;
+  left: 0; */
+  /* width: 100%;
+  height: 100%; */
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(0px);
+  overflow: hidden; /* Ensures smooth edge cutoff */
+}
+
+.circle.one {
+  width: 400px;
+  height: 400px;
+  top: -190px;
+  left: -120px;
+}
+
+.circle.two {
+  width: 300px;
+  height: 300px;
+  top: 200px;
+  right: -150px;
+}
+
+.circle.three {
+  width: 400px;
+  height: 400px;
+  bottom: -180px;
+  left: -50px;
 }
 
 /* Navbar */
@@ -53,19 +89,18 @@ body {
 }
 
 /* Home Section */
-.icon-background .icon {
+.home .icon-background .icon {
+  position: fixed;
   font-size: 80px;
   color: rgba(255, 255, 255, 0.2); /* Transparent look */
-  position: absolute;
+  /* position: absolute; */
   animation: float 6s ease-in-out infinite;
 }
 
 /* Specific Icon Positions */
-.icon:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
-.icon:nth-child(2) { top: 20%; left: 85%; animation-delay: 1s; }
-.icon:nth-child(3) { top: 30%; left: 45%; animation-delay: 2s; }
-.icon:nth-child(4) { top: 75%; left: 15%; animation-delay: 3s; }
-.icon:nth-child(5) { top: 80%; left: 75%; animation-delay: 4s; }
+.icon:nth-child(1) { top: 90px; left: 60px; animation-delay: 0s; }
+.icon:nth-child(2) { top: 300px; right: 20px; animation-delay: 1s; }
+.icon:nth-child(3) { bottom: 60px; left: 150px; animation-delay: 4s; }
 
 /* Icon Floating Animation */
 @keyframes float {
@@ -141,3 +176,4 @@ footer {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
