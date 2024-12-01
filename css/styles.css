@@ -194,32 +194,6 @@ footer {
   font-size: 2.5rem;
 }
 
-.card1 {
-  background-color: rgb(255, 255, 255, 0.1);
-  border-radius: 15px;
-  margin: 0px 30px 50px 30px;
-  padding: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
-  /* box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5); */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover animation */
-  overflow-x: auto;
-}
-
-.card1:nth-child(odd) {
-  flex-direction: row-reverse; /* Alternate the order for even sections */
-}
-
-.card1:hover {
-  transform: translateY(-10px); /* Lift the section slightly */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
-}
-
 /* Container for all cards */
 .card-container {
   display: flex;
@@ -230,9 +204,16 @@ footer {
 }
 
 /* Individual cards */
+.default-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card {
   display: flex;
-  flex-direction: row; /* Default is column layout */
+  flex-direction: column; /* Default layout: column */
   align-items: center; /* Center content initially */
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
@@ -242,26 +223,23 @@ footer {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease; /* Smooth transition for layout changes */
   overflow: hidden;
+  position: relative;
 }
 
 /* When the card is active (expanded) */
 .card.active {
-  width: 80vw; /* Expand width to 80% of viewport */
-  max-width: 80vw; /* Ensure it doesn't exceed 80vw */
+  flex-direction: row; /* Change layout to row */
+  width: 90vw; /* Expand width to 80% of viewport */
+  max-width: 90vw; /* Ensure it doesn't exceed 80vw */
   transition: all 0.3s ease; /* Smooth animation for expansion */
+  justify-content: flex-start; /* Align items to the left in expanded mode */
 }
 
-
-/* Hover effect for cards */
-.card:hover {
-  transform: translateY(-10px); /* Lift the card slightly */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
-}
-
+/* Image container */
 .card figure {
-  flex: 0 0 100px; /* Ensure consistent width */
-  margin: 0;
+  flex: 0 0 100px; /* Fixed size for the image */
   text-align: center;
+  margin: 0;
 }
 
 .card figure img {
@@ -272,17 +250,11 @@ footer {
   border: 5px solid #fff;
 }
 
-.card figure figcaption {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #ccc;
-}
-
-/* Heading styles */
+/* Heading below the image */
 .card h3 {
   font-size: 1.3rem;
   text-align: center;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0 0; /* Position below the image */
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
@@ -296,27 +268,22 @@ footer {
   color: #333; /* Change text color on hover */
 }
 
-/* Text content (hidden by default) */
+/* Expanded content section */
 .card .content {
-  display: none; /* Initially hidden */
-  flex: 1; /* Expand to fill space */
-  padding-left: 30px;
+  display: none; /* Hidden by default */
+  flex: 1; /* Expandable content */
+  padding: 20px;
   opacity: 0; /* Invisible initially */
-  transition: opacity 0.3s ease; /* Smooth opacity transition */
   text-align: left;
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
 }
 
 .card.active .content {
   display: block; /* Show content when active */
-  opacity: 1;
+  opacity: 1; /* Fade-in effect */
 }
 
 .content p {
   font-size: 1.2rem;
   line-height: 1.8;
 }
-
-.hidden {
-  display: none;
-}
-
