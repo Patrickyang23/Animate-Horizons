@@ -5,6 +5,33 @@ body, h1, h2, h3, p, ul, li, a {
   box-sizing: border-box;
 }
 
+strong, b {
+  font-weight: bold;
+}
+
+/* Skip link styles */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  text-align: center;
+  width: 60vw;
+  left: 50%;
+  transform:translateX(-50%);
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1000;  /* Ensures it's on top of other elements */
+  opacity: 0;  /* Initially invisible */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;  /* Smooth transitions */
+}
+.skip-link:focus {
+  top: 10px;  /* Move the link back into view */
+  opacity: 1;  /* Make it visible */
+  z-index: 1200
+}
+
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
@@ -18,7 +45,7 @@ body {
 
 /* Background Design */
 .home .background-decor .circle {
-  z-index: 10;
+  z-index: -1;
   /* top: 0;
   left: 0; */
   /* width: 100%;
@@ -54,12 +81,11 @@ body {
 /* Navbar */
 .navbar {
   height: 35px; /* Explicit height of the navbar */
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -95,6 +121,10 @@ body {
   color: rgba(255, 255, 255, 0.2); /* Transparent look */
   /* position: absolute; */
   animation: float 6s ease-in-out infinite;
+}
+
+.icon {
+  z-index: -1;
 }
 
 /* Specific Icon Positions */
@@ -138,36 +168,12 @@ body {
   margin-bottom: 10px;
 }
 
-/* History Section */
-.history h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-.history article {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 800px;
-}
-
-.history article h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.history article p {
-  font-size: 1rem;
-  text-align: left;
-}
-
 /* Footer */
 footer {
   height: 35px;
   text-align: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0);
 }
 
 /* Background Animation */
@@ -175,5 +181,104 @@ footer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+ /* History section */
+ .history {
+  padding: 20px;
+}
+
+.history h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.card {
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 0px 30px 50px 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  /* box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5); */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover animation */
+}
+
+.card:nth-child(odd) {
+  flex-direction: row-reverse; /* Alternate the order for even sections */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift the section slightly */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
+}
+
+/* .card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+} */
+
+figure {
+  flex: 0 0 250px; /* Ensure consistent width */
+  text-align: center;
+}
+
+figure img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ccc;
+}
+/* 
+.card .content {
+  flex: 1;
+}
+
+.card .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card .content p {
+  font-size: 1rem;
+  line-height: 1.6;
+} */
+
+.content {
+  flex: 1;
+  text-align: left;
+}
+
+/* Import Google Fonts */
+.content h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
