@@ -226,6 +226,11 @@ footer {
   position: relative;
 }
 
+.card:hover {
+  transform: translateY(-10px); /* Lift the card slightly */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
+}
+
 /* When the card is active (expanded) */
 .card.active {
   flex-direction: row; /* Change layout to row */
@@ -233,6 +238,15 @@ footer {
   max-width: 90vw; /* Ensure it doesn't exceed 80vw */
   transition: all 0.3s ease; /* Smooth animation for expansion */
   justify-content: flex-start; /* Align items to the left in expanded mode */
+}
+
+
+/* Image and heading container */
+.card.active .default-card:first-child {
+  flex: 0 0 250px; /* Fixed width for image and heading container */
+  display: flex;
+  flex-direction: column; /* Stack image and heading vertically */
+  align-items: center; /* Center content in this section */
 }
 
 /* Image container */
@@ -275,6 +289,7 @@ footer {
   padding: 20px;
   opacity: 0; /* Invisible initially */
   text-align: left;
+  margin-left: 40px;
   transition: opacity 0.3s ease; /* Smooth fade-in effect */
 }
 
