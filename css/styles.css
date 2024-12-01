@@ -183,8 +183,8 @@ footer {
   100% { background-position: 0% 50%; }
 }
 
- /* History section */
- .history {
+/* History section */
+.history {
   padding: 20px;
 }
 
@@ -194,7 +194,7 @@ footer {
   font-size: 2.5rem;
 }
 
-.card {
+.card1 {
   background-color: rgb(255, 255, 255, 0.1);
   border-radius: 15px;
   margin: 0px 30px 50px 30px;
@@ -208,24 +208,70 @@ footer {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover animation */
+  overflow-x: auto;
 }
 
-.card:nth-child(odd) {
+.card1:nth-child(odd) {
   flex-direction: row-reverse; /* Alternate the order for even sections */
 }
 
-.card:hover {
+.card1:hover {
   transform: translateY(-10px); /* Lift the section slightly */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
 }
 
-/* .card img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #fff;
-} */
+/* Container for all cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row */
+  justify-content: center; /* Center the cards in the row */
+  gap: 20px; /* Add space between cards */
+  padding: 20px;
+}
+
+/* Individual cards */
+.card {
+  display: flex;
+  flex-direction: column; /* Default is column layout */
+  align-items: center; /* Center content initially */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: calc(33.333% - 40px);
+  max-width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease; /* Smooth transition for layout changes */
+  overflow: hidden;
+}
+
+/* Flex row when active */
+.card.active {
+  flex-direction: row; /* Change layout to row */
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align content to the start */
+  max-width: 100%; /* Expand card width */
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-10px); /* Lift the card slightly */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px); /* Set 2 cards per row for smaller screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* Set 1 card per row for very small screens */
+    max-width: 100%;
+  }
+}
 
 figure {
   flex: 0 0 250px; /* Ensure consistent width */
@@ -245,20 +291,6 @@ figcaption {
   font-size: 1rem;
   color: #ccc;
 }
-/* 
-.card .content {
-  flex: 1;
-}
-
-.card .content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.card .content p {
-  font-size: 1rem;
-  line-height: 1.6;
-} */
 
 .content {
   flex: 1;
@@ -266,7 +298,7 @@ figcaption {
 }
 
 /* Import Google Fonts */
-.content h3 {
+/* .content h3 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
@@ -274,11 +306,69 @@ figcaption {
   position: relative;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+} */
+
+/* Heading styles */
+.card h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for layout changes */
 }
 
+/* Move heading to the right side */
+.card.active h3 {
+  margin-left: 20px;
+  flex: 1; /* Allow the h3 to take available space */
+  text-align: left;
+}
+
+/* Default styles for the <h3> */
+.content1 h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px auto; /* Adjust margin for compactness */
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  width: 80%; /* Make it compact */
+  word-wrap: break-word; /* Ensure long text wraps */
+  cursor: pointer; /* Add pointer cursor for interactivity */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Text content styles */
+.card .content {
+  display: none; /* Initially hidden */
+  flex: 1;
+  margin-top: 10px;
+  text-align: left;
+  transition: opacity 0.3s ease; /* Smooth text reveal */
+}
+
+.card.active .content {
+  display: block; /* Show content when active */
+  opacity: 1;
+}
+
+/* Hover effect */
+.content h3:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Highlight background on hover */
+  color: #333; /* Change text color on hover */
+}
 
 .content p {
   font-size: 1.2rem;
   line-height: 1.8;
+}
+
+.hidden {
+  display: none;
 }
 
