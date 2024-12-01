@@ -232,25 +232,25 @@ footer {
 /* Individual cards */
 .card {
   display: flex;
-  flex-direction: column; /* Default is column layout */
+  flex-direction: row; /* Default is column layout */
   align-items: center; /* Center content initially */
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 20px;
-  width: calc(33.333% - 40px);
+  width: 300px;
   max-width: 300px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease; /* Smooth transition for layout changes */
   overflow: hidden;
 }
 
-/* Flex row when active */
+/* When the card is active (expanded) */
 .card.active {
-  flex-direction: row; /* Change layout to row */
-  align-items: flex-start; /* Align items to the top */
-  justify-content: flex-start; /* Align content to the start */
-  max-width: 100%; /* Expand card width */
+  width: 80vw; /* Expand width to 80% of viewport */
+  max-width: 80vw; /* Ensure it doesn't exceed 80vw */
+  transition: all 0.3s ease; /* Smooth animation for expansion */
 }
+
 
 /* Hover effect for cards */
 .card:hover {
@@ -258,27 +258,13 @@ footer {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .card {
-    flex: 1 1 calc(50% - 20px); /* Set 2 cards per row for smaller screens */
-    max-width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    flex: 1 1 100%; /* Set 1 card per row for very small screens */
-    max-width: 100%;
-  }
-}
-
-figure {
-  flex: 0 0 250px; /* Ensure consistent width */
+.card figure {
+  flex: 0 0 100px; /* Ensure consistent width */
+  margin: 0;
   text-align: center;
 }
 
-figure img {
+.card figure img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -286,33 +272,17 @@ figure img {
   border: 5px solid #fff;
 }
 
-figcaption {
+.card figure figcaption {
   margin-top: 10px;
   font-size: 1rem;
   color: #ccc;
 }
 
-.content {
-  flex: 1;
-  text-align: left;
-}
-
-/* Import Google Fonts */
-/* .content h3 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-} */
-
 /* Heading styles */
 .card h3 {
   font-size: 1.3rem;
   text-align: center;
-  margin: 10px 0;
+  margin: 20px 0 0 0;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
@@ -321,46 +291,24 @@ figcaption {
   transition: all 0.3s ease; /* Smooth transition for layout changes */
 }
 
-/* Move heading to the right side */
-.card.active h3 {
-  margin-left: 20px;
-  flex: 1; /* Allow the h3 to take available space */
-  text-align: left;
+.card h3:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Highlight background on hover */
+  color: #333; /* Change text color on hover */
 }
 
-/* Default styles for the <h3> */
-.content1 h3 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 10px auto; /* Adjust margin for compactness */
-  padding: 10px;
-  text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  width: 80%; /* Make it compact */
-  word-wrap: break-word; /* Ensure long text wraps */
-  cursor: pointer; /* Add pointer cursor for interactivity */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-}
-
-/* Text content styles */
+/* Text content (hidden by default) */
 .card .content {
   display: none; /* Initially hidden */
-  flex: 1;
-  margin-top: 10px;
+  flex: 1; /* Expand to fill space */
+  padding-left: 30px;
+  opacity: 0; /* Invisible initially */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
   text-align: left;
-  transition: opacity 0.3s ease; /* Smooth text reveal */
 }
 
 .card.active .content {
   display: block; /* Show content when active */
   opacity: 1;
-}
-
-/* Hover effect */
-.content h3:hover {
-  background-color: rgba(255, 255, 255, 0.4); /* Highlight background on hover */
-  color: #333; /* Change text color on hover */
 }
 
 .content p {
