@@ -231,8 +231,7 @@ main h2 {
 /* When the card is active (expanded) */
 .card.active {
   flex-direction: column;
-  width: 90vw; /* Expand width to 80% of viewport */
-  max-width: 90vw; /* Ensure it doesn't exceed 80vw */
+  width: 90vw; /* Expand width to 90% of viewport */
   transition: all 0.3s ease; /* Smooth animation for expansion */
   justify-content: flex-start; /* Align items to the left in expanded mode */
 }
@@ -334,7 +333,6 @@ main h2 {
   .card.active {
     flex-direction: row; /* Change layout to row */
     width: 90vw; /* Expand width to 80% of viewport */
-    max-width: 90vw; /* Ensure it doesn't exceed 80vw */
     transition: all 0.3s ease; /* Smooth animation for expansion */
     justify-content: flex-start; /* Align items to the left in expanded mode */
   }
