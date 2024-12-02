@@ -47,10 +47,6 @@ body {
 /* Background Design */
 .home .background-decor .circle {
   z-index: -1;
-  /* top: 0;
-  left: 0; */
-  /* width: 100%;
-  height: 100%; */
   position: fixed;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
@@ -139,6 +135,16 @@ body {
   margin-bottom: 10px;
 }
 
+.buttons a {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.buttons a:hover {
+  transform: scale(1.05);
+  color: #f39c12;
+}
+
 /* Footer */
 footer {
   font-size: 1.2rem;
@@ -203,7 +209,6 @@ main h2 {
   transition: all 0.3s ease; /* Smooth animation for expansion */
   justify-content: flex-start; /* Align items to the left in expanded mode */
 }
-
 
 /* Image and heading container */
 .card.active .default-card:first-child {

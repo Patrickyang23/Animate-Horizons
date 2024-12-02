@@ -90,11 +90,12 @@ nav {
 .side-menu ul li a {
     color: white;
     text-decoration: none;
-    /* font-size: 1.2em; */
+    font-size: 1.2rem;
 }
 
 .side-menu ul li a:hover {
     transform: scale(1.05);
+    color: #f39c12;
 }
 
 /* Make the side menu slide in */
