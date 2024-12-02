@@ -3,122 +3,312 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>History of Animation - Animate Horizons</title>
+  <title>Genre of Animation - Animate Horizons</title>
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/lightbox.css">
 </head>
 <body>
   <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-  <header class="navbar">
-    <div class="logo">Animate Horizons</div>
+  <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="genre.html">Genre</a></li>
-        <li><a href="collection.html">Collection</a></li>
-      </ul>
+      <div class="hamburger" tabindex="0">&#9776;</div>  <!-- Hamburger icon (three lines) -->
+      <div class="logo">Animate Horizons</div>
+
+      <!-- Side menu for small screens (hidden by default) -->
+      <div class="side-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="genre.html">Genre</a></li>
+          <li><a href="collection.html">Collection</a></li>
+        </ul>
+      </div>
+      <div class="overlay"></div> <!-- Background overlay -->
+      
+      <div class="nav-menu">
+          <ul>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="history.html">History</a></li>
+              <li><a href="genre.html">Genre</a></li>
+              <li><a href="collection.html">Collection</a></li>
+            </ul>
+          </ul>
+      </div>
     </nav>
   </header>
 
-  <main id="main-content" class="history">
-    <h2>Genres of Animation</h2>
+  <main id="main-content" class="genre">
+    <h2>Genre of Animation</h2>
 
-    <!-- Early Animation Devices -->
-    <section class="card">
-      <figure>
-        <img src="images/history/Two_girls_playing_with_zoetrope.jpg" alt="Two girls playing with zoetrope">
-        <figcaption>Zoetrope</figcaption>
-      </figure>
-      <div class="content">
-        <h3>Fantasy</h3>
-        <p>Introduction:
-          Fantasy animation takes viewers into imaginative, otherworldly settings filled with magic, mythical creatures, and epic quests. These stories often explore universal themes of heroism, self-discovery, and the battle between good and evil.
-          Notable Works:
-          •	Spirited Away (2001): A young girl navigates a magical world to save her family.
-          •	The Dark Crystal: Age of Resistance (2019): A richly detailed animated series set in a mystical land.
-          •	Adventure Time (2010–2018): A whimsical journey through the fantastical Land of Ooo.
-          </p>
-      </div>
-    </section>
+    <div class="card-container">
+      <!-- Fantasy -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/Spirited Away (2001).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/Spirited Away (2001).jpg" alt="Spirited Away">
+            </a>
+            <figcaption>Spirited Away<br>(2001)</figcaption>
+          </figure>
+          <h3>Fantasy</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Fantasy animation takes viewers into imaginative, otherworldly settings filled with magic, mythical creatures, and epic quests. These stories often explore universal themes of heroism, self-discovery, and the battle between good and evil.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Spirited Away (2001):</b> A young girl navigates a magical world to save her family.</li>
+            <li><b>The Dark Crystal: Age of Resistance (2019):</b> A richly detailed animated series set in a mystical land.</li>
+            <li><b>Adventure Time (2010–2018):</b> A whimsical journey through the fantastical Land of Ooo.</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Silent Era -->
-    <section class="card">
-      <figure>
-        <img src="images/history/Humorous_Phases_of_Funny_Faces_1906_Poster.jpg" alt="Humorous Phases of Funny Faces">
-        <figcaption>Humorous Phases of Funny Faces<br>(1906)</figcaption>
-      </figure>
-      <div class="content">
-        <h3>Silent Era (1900-1920s)</h3>
-        <p>The silent era saw animation emerge as a recognized medium for storytelling and artistic experimentation. This period was defined by painstakingly hand-drawn films, often created by a single animator. A landmark work of the time was Winsor McCay’s <b>"Gertie the Dinosaur"</b> (1914), which introduced character-driven animation and interactivity, as McCay performed live alongside Gertie. Another notable work was Stuart Blackton’s <b>"Humorous Phases of Funny Faces"</b> (1906), often credited as the first animated film. The era’s major improvement was the development of cel animation, which streamlined production by allowing animators to separate character movements from static backgrounds, reducing workload and enabling more complex stories.</p>
-      </div>
-    </section>
+      <!-- Science Fiction -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/Love, Death & Robots (2019).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/Love, Death & Robots (2019).jpg" alt="Love, Death & Robots">
+            </a>
+            <figcaption>Love, Death & Robots<br>(2019)</figcaption>
+          </figure>
+          <h3>Science Fiction</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Sci-fi animation delves into futuristic worlds, advanced technologies, space exploration, and ethical dilemmas. These works often combine speculative storytelling with visually stunning landscapes.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Ghost in the Shell (1995):</b> A cyberpunk anime exploring identity and technology.</li>
+            <li><b>Futurama (1999–2013):</b> A humorous take on a futuristic society.</li>
+            <li><b>Love, Death & Robots (2019–present):</b> An anthology series blending sci-fi themes with cutting-edge animation.</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Golden Age -->
-    <section class="card">
-      <figure>
-        <img src="images/history/Steamboat_Willie_1928_Poster.jpg" alt="Steamboat Willie">
-        <figcaption>Steamboat Willie<br>(1928)</figcaption>
-      </figure>
-      <div class="content">
-        <h3>Golden Age of Animation (1930s-1950s)</h3>
-        <p>The Golden Age was marked by the rise of major studios like Walt Disney Productions, Warner Bros., and MGM, which shaped animation into a mainstream art form. Walt Disney’s <b>"Steamboat Willie"</b> (1928) introduced synchronized sound, revolutionizing the medium and popularizing Mickey Mouse. This era reached its pinnacle with <b>"Snow White and the Seven Dwarfs"</b> (1937), the first full-length animated feature film, which blended compelling storytelling, rich characters, and innovative use of technicolor. Warner Bros. countered with shorts featuring now-iconic characters like Bugs Bunny and Daffy Duck, characterized by fast-paced humor and clever dialogue. The era’s advancements included the use of vibrant colors, synchronized soundtracks, and sophisticated character animation, establishing animation as a serious medium in cinema.</p>
-      </div>
-    </section>
+      <!-- Action/Adventure -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/Avatar (2005).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/Avatar (2005).jpg" alt="Avatar">
+            </a>
+            <figcaption>Avatar<br>(2005)</figcaption>
+          </figure>
+          <h3>Action/Adventure</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Action and adventure animations are characterized by thrilling sequences, dynamic characters, and explorations of new worlds. They often involve high stakes, battles, and the pursuit of justice or glory.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Avatar: The Last Airbender (2005–2008):</b> A blend of martial arts and fantasy in a richly developed universe.</li>
+            <li><b>Dragon Ball Z (1989–1996):</b> A legendary anime series featuring epic battles and powerful characters.</li>
+            <li><b>Spider-Man: Into the Spider-Verse (2018):</b> A groundbreaking animated superhero film.</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Post-War Era -->
-    <section class="card">
-      <figure>
-        <img src="images/history/Astro_Boy_1963_Poster.jpg" alt="Astro Boy">
-        <figcaption>Astro Boy<br>(1963)</figcaption>
-      </figure>
-      <div class="content">
-        <h3>Post-War Era and Television Animation (1950s-1970s)</h3>
-        <p>With the advent of television, animation shifted towards shorter, cost-effective formats tailored for home viewing. Shows like <b>"The Flintstones"</b> (1960) and <b>"Scooby-Doo"</b> (1969) brought animation into living rooms, emphasizing humor and relatability. Meanwhile, Japan’s animation industry, led by Osamu Tezuka’s <b>"Astro Boy"</b> (1963), introduced serialized storytelling and unique artistic styles, laying the groundwork for the global popularity of anime. This period also saw the rise of limited animation techniques, which reused frames and backgrounds to lower costs while maintaining visual appeal. Despite these constraints, the era produced beloved characters and long-lasting series that left a cultural impact.</p>
-      </div>
-    </section>
+      <!-- Comedy -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/The Simpsons (1989).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/The Simpsons (1989).jpg" alt="The Simpsons">
+            </a>
+            <figcaption>The Simpsons<br>(1989)</figcaption>
+          </figure>
+          <h3>Comedy</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Comedy animations focus on humor and satire, often using exaggerated visuals and witty dialogue to entertain audiences. These works frequently tackle societal norms and absurdities with a lighthearted touch.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>The Simpsons (1989–present):</b> A satirical depiction of family life in America.</li>
+            <li><b>Rick and Morty (2013–present):</b> A darkly comedic exploration of science and family dysfunction.</li>
+            <li><b>Despicable Me (2010):</b> A family-friendly comedy about a supervillain turned dad.</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Animation Renaissance -->
-    <section class="card">
-      <figure>
-        <img src="images/history/The_Little_Mermaid_1989_Poster.jpg" alt="The Little Mermaid">
-        <figcaption>The Little Mermaid<br>(1989)</figcaption>
-      </figure>
-      <div class="content">
-        <h3>Animation Renaissance (1980s-1990s)</h3>
-        <p>The Renaissance revitalized traditional animation through emotionally resonant storytelling and advancements in technology. Disney’s <b>"The Little Mermaid"</b> (1989) began a string of successful musicals, including <b>"Beauty and the Beast"</b> (1991) and <b>"The Lion King"</b> (1994), which combined traditional hand-drawn animation with emerging computer techniques. Meanwhile, Pixar debuted <b>"Toy Story"</b> (1995), the first fully CGI-animated feature film, which showcased the potential of computer-generated imagery in creating lifelike movement and textures. This era also saw the rise of international animation, with works like Studio Ghibli’s <b>"My Neighbor Totoro"</b> (1988) gaining global acclaim. The Renaissance’s innovations reinvigorated the industry and introduced new artistic possibilities.</p>
-      </div>
-    </section>
+      <!-- Drama/Slice of Life -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/Bojack Horseman (2014).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/Bojack Horseman (2014).jpg" alt="Bojack Horseman">
+            </a>
+            <figcaption>Bojack Horseman<br>(2014)</figcaption>
+          </figure>
+          <h3>Drama/Slice of Life</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Drama and slice-of-life animations portray realistic stories centered on personal struggles, relationships, and emotional growth. These works often resonate deeply with viewers by depicting ordinary lives in extraordinary ways.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Your Name (2016):</b> A touching romantic drama about two teenagers mysteriously connected.</li>
+            <li><b>Clannad (2007–2008):</b> A heartfelt story about love, family, and personal loss.</li>
+            <li><b>Bojack Horseman (2014–2020):</b> A dark comedy-drama exploring themes of fame, depression, and redemption.</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- Digital Era -->
-    <section class="card">
-      <figure>
-        <img src="images/history/Shrek_2001_Poster.jpg" alt="Shrek">
-        <figcaption>Shrek<br>(2001)</figcaption>
-      </figure>
-      <div class="content">
-        <h3>Digital Era and Global Animation (2000s-Present)</h3>
-        <p>The digital era has been defined by CGI dominance and global collaboration. Films like DreamWorks’ <b>"Shrek"</b> (2001), Pixar’s <b>"Finding Nemo"</b> (2003), and Disney’s <b>"Frozen"</b> (2013) exemplify the advancements in CGI technology, offering unprecedented realism and emotional depth. Japanese animation gained worldwide recognition with Studio Ghibli’s <b>"Spirited Away"</b> (2001), which won an Academy Award for Best Animated Feature. This era also saw the rise of streaming platforms, enabling diverse storytelling and styles to reach global audiences. Animation continues to push boundaries with motion capture, virtual reality, and AI-driven tools, cementing its role as a versatile and innovative medium for storytelling.</p>
-      </div>
-    </section>
+      <!-- Horror -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/Coraline (2009).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/Coraline (2009).jpg" alt="Coraline">
+            </a>
+            <figcaption>Coraline<br>(2009)</figcaption>
+          </figure>
+          <h3>Horror</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Horror animation uses chilling visuals and eerie narratives to create suspense and fear. It often dives into psychological and supernatural realms, making it a unique genre in animation.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Coraline (2009):</b> A dark fantasy tale about a girl who discovers a sinister parallel world.</li>
+            <li><b>Perfect Blue (1997):</b> A psychological thriller about the pressures of fame.</li>
+            <li><b>Castlevania (2017–2021):</b> A gothic horror series based on the video game franchise.</li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="card">
-      <figure>
-        <img src="images/history/Soul_2020_Poster.jpg" alt="Shrek">
-        <figcaption>Soul<br>(2020)</figcaption>
-      </figure>
-      <div class="content">
-        <h3>Modern Trends</h3>
-        <p>Today, animation blends traditional techniques with cutting-edge technologies like virtual reality, AI-assisted animation, and real-time rendering engines. Streaming platforms have broadened the audience for animated films, while diverse genres and themes are now explored, from family-friendly stories like <b>"Soul"</b> (2020) to experimental works like <b>"Spider-Man: Into the Spider-Verse</b>" (2018), which used a groundbreaking visual style that combined hand-drawn and CGI techniques. Animation continues to evolve as a medium for artistic innovation and global storytelling.</p>
-      </div>
-    </section>
+      <!-- Romance -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/Howl's Moving Castle (2004).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/Howl's Moving Castle (2004).jpg" alt="Howl's Moving Castle">
+            </a>
+            <figcaption>Howl's Moving Castle<br>(2004)</figcaption>
+          </figure>
+          <h3>Romance</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Romance animations explore the intricacies of love and relationships, often showcasing tender moments, heartbreak, and emotional connections.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Howl's Moving Castle (2004):</b> A magical love story set in a fantastical world.</li>
+            <li><b>Toradora! (2008–2009):</b> A heartwarming anime about love and friendship.</li>
+            <li><b>The Little Mermaid (1989):</b> A classic Disney tale of love and transformation.</li>
+          </ul>
+        </div>
+      </section>
 
+      <!-- Musical -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/The Lion King (1994).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/The Lion King (1994).jpg" alt="The Lion King">
+            </a>
+            <figcaption>The Lion King<br>(1994)</figcaption>
+          </figure>
+          <h3>Musical</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Musical animations combine captivating narratives with song and dance sequences. The music often drives the story, creating an immersive experience for audiences.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Frozen (2013):</b> A Disney tale with unforgettable songs like "Let It Go."</li>
+            <li><b>The Lion King (1994):</b> A coming-of-age story enriched by iconic musical numbers.</li>
+            <li><b>Sing (2016):</b> A lighthearted comedy about a group of animals showcasing their vocal talents.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Superhero -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/Batman (1992).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/Batman (1992).jpg" alt="Batman: The Animated Series">
+            </a>
+            <figcaption>Batman<br>(1992)</figcaption>
+          </figure>
+          <h3>Superhero</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Superhero animations bring comic book heroes to life, showcasing their battles against villains while exploring their moral dilemmas and human vulnerabilities.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Batman: The Animated Series (1992–1995):</b> A definitive portrayal of Gotham’s Dark Knight.</li>
+            <li><b>Teen Titans (2003–2006):</b> A vibrant series about a group of young heroes.</li>
+            <li><b>Spider-Man: Into the Spider-Verse (2018):</b> A multi-dimensional take on the Spider-Man legacy.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Historical -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/The Wind Rises (2013).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/The Wind Rises (2013).jpg" alt="The Wind Rises">
+            </a>
+            <figcaption>The Wind Rises<br>(2013)</figcaption>
+          </figure>
+          <h3>Historical</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Historical animations recreate events from history or tell fictional stories set in historical contexts. These works often combine accuracy with compelling narratives.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>The Wind Rises (2013):</b> A semi-biographical tale about the life of an aircraft designer.</li>
+            <li><b>Grave of the Fireflies (1988):</b> A heartbreaking story of two siblings during WWII.</li>
+            <li><b>The Tale of the Princess Kaguya (2013):</b> A poetic retelling of a Japanese folk tale.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Experimental -->
+      <section class="card">
+        <div>
+          <figure>
+            <a href="images/genre/Fantasia (1940).jpg" data-lightbox="genre" data-title="Genre of Animation Images">
+              <img src="images/genre/Fantasia (1940).jpg" alt="Fantasia">
+            </a>
+            <figcaption>Fantasia<br>(1940)</figcaption>
+          </figure>
+          <h3>Experimental/Abstract</h3>
+        </div>
+        <div class="content">
+          <h4>Introduction</h4>
+          <p>Experimental animations prioritize artistic expression over conventional storytelling, using abstract visuals, surreal imagery, and unconventional techniques.</p>
+          <h4>Notable Works</h4>
+          <ul>
+            <li><b>Fantasia (1940):</b> A fusion of classical music and surreal animation.</li>
+            <li><b>The Adventures of Prince Achmed (1926):</b> The oldest surviving animated feature, created with intricate silhouette animation.</li>
+            <li><b>World of Tomorrow (2015):</b> A visually unique exploration of memory and identity.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2024 Animate Horizons. All rights reserved.</p>
   </footer>
+
+  <!-- Link JavaScript file -->
+  <script src="js/styles.js"></script>
+  <script src="js/lightbox-plus-jquery.js"></script>
+
 </body>
 </html>

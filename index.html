@@ -7,20 +7,38 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
   <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-  <header class="navbar">
-    <div class="logo">Animate Horizons</div>
+  <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="genre.html">Genre</a></li>
-        <li><a href="collection.html">Collection</a></li>
-      </ul>
+      <div class="hamburger" tabindex="0">&#9776;</div>  <!-- Hamburger icon (three lines) -->
+      <div class="logo">Animate Horizons</div>
+
+      <!-- Side menu for small screens (hidden by default) -->
+      <div class="side-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="genre.html">Genre</a></li>
+          <li><a href="collection.html">Collection</a></li>
+        </ul>
+      </div>
+      <div class="overlay"></div> <!-- Background overlay -->
+      
+      <div class="nav-menu">
+          <ul>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="history.html">History</a></li>
+              <li><a href="genre.html">Genre</a></li>
+              <li><a href="collection.html">Collection</a></li>
+            </ul>
+          </ul>
+      </div>
     </nav>
   </header>
 
@@ -42,8 +60,8 @@
     <p>Explore the magic, history, and genres of animation through time.</p>
     <p class="buttons">
         <a href="history.html" class="btn">Explore History</a>
-        <a href="#genre" class="btn">Discover Genres</a>
-        <a href="#genre" class="btn">Movie Collection</a>
+        <a href="genre.html" class="btn">Discover Genres</a>
+        <a href="collection.html" class="btn">Movie Collection</a>
       </div>
     </p>
   </main>
@@ -51,6 +69,9 @@
   <footer>
     <p>&copy; 2024 Animate Horizons. All rights reserved.</p>
   </footer>
+
+  <!-- Link JavaScript file -->
+  <script src="js/styles.js"></script>
 
 </body>
 </html>

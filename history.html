@@ -6,25 +6,43 @@
   <title>History of Animation - Animate Horizons</title>
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/lightbox.css">
 </head>
 <body>
   <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-  <header class="navbar">
-    <div class="logo">Animate Horizons</div>
+  <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="genre.html">Genre</a></li>
-        <li><a href="collection.html">Collection</a></li>
-      </ul>
+      <div class="hamburger" tabindex="0">&#9776;</div>  <!-- Hamburger icon (three lines) -->
+      <div class="logo">Animate Horizons</div>
+
+      <!-- Side menu for small screens (hidden by default) -->
+      <div class="side-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="genre.html">Genre</a></li>
+          <li><a href="collection.html">Collection</a></li>
+        </ul>
+      </div>
+      <div class="overlay"></div> <!-- Background overlay -->
+      
+      <div class="nav-menu">
+          <ul>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="history.html">History</a></li>
+              <li><a href="genre.html">Genre</a></li>
+              <li><a href="collection.html">Collection</a></li>
+            </ul>
+          </ul>
+      </div>
     </nav>
   </header>
 
-  <main id="main-content" class="history">
+  <main id="main-content">
     <h2>History of Animation</h2>
 
     <div class="card-container">
@@ -142,7 +160,7 @@
         </div>
 
         <div class="content">
-          <p>Today, animation blends traditional techniques with cutting-edge technologies like virtual reality, AI-assisted animation, and real-time rendering engines. Streaming platforms have broadened the audience for animated films, while diverse genres and themes are now explored, from family-friendly stories like <b>"Soul"</b> (2020) to experimental works like <b>"Spider-Man: Into the Spider-Verse</b>" (2018), which used a groundbreaking visual style that combined hand-drawn and CGI techniques. Animation continues to evolve as a medium for artistic innovation and global storytelling.</p>
+          <p>Today, animation blends traditional techniques with cutting-edge technologies like virtual reality, AI-assisted animation, and real-time rendering engines. Streaming platforms have broadened the audience for animated films, while diverse genres and themes are now explored, from family-friendly stories like <b>"Soul"</b> (2020) to experimental works like <b>"Spider-Man: Into the Spider-Verse"</b> (2018), which used a groundbreaking visual style that combined hand-drawn and CGI techniques. Animation continues to evolve as a medium for artistic innovation and global storytelling.</p>
         </div>
       </section>
     </div>
@@ -153,7 +171,7 @@
   </footer>
 
   <!-- Link JavaScript file -->
-  <script src="js/main.js"></script>
+  <script src="js/styles.js"></script>
   <script src="js/lightbox-plus-jquery.js"></script>
 
 </body>

@@ -1,0 +1,146 @@
+/* Navigation */
+nav {
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    display: flex;
+    justify-content: space-between; /* Default for the small screen */
+    align-items: center;
+    background-color: rgba(0, 0, 0); /* Add a background color */
+    padding: 15px 30px;  /* Padding around the nav to give space */
+    z-index: 1000;  /* Ensure the nav stays on top of other elements */
+}
+
+/* Hamburger Menu (default: visible on smaller screens) */
+.hamburger {
+    display: block;
+    font-size: 1.4rem;
+    margin-right: 10px;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;  /* Ensure it's above the overlay */
+}
+
+.hamburger:hover{
+    transform: scale(1.2);
+}
+
+/* .hamburger:focus{
+    transform: scale(1.2);
+} */
+
+/* Right side - Navigation links */
+.nav-menu ul {
+    list-style: none;
+    color: white;
+    display: none; /* Default: hide menu for small screens */
+    padding: 0;
+    margin: 0;
+    gap: 10px;  /* Space between items */
+}
+
+.nav-menu ul li {
+    display: inline;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;  /* Make <a> behave as a block to allow transform */
+    transition: transform 0.3s ease, background-color 0.3s ease;  /* Smooth transition for scale */
+}
+
+.nav-menu ul li a:hover {
+    transform: scale(1.05);
+    color: #f39c12;
+}
+
+
+/* Side Menu (hidden by default, visible on small screens) */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -500px;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1100;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    /* font-size: 1.2em; */
+}
+
+.side-menu ul li a:hover {
+    transform: scale(1.05);
+}
+
+/* Make the side menu slide in */
+.side-menu.active {
+    left: 0;
+}
+
+/* Overlay (initially hidden) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+
+/* Responsive behavior for screens larger than 780px */
+@media (min-width: 780px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    /* Hide the hamburger icon */
+    .hamburger {
+        display: none;
+    }
+    
+    /* Show the full navigation menu */
+    .nav-menu ul {
+        display: flex;  /* Switch to horizontal nav layout */
+        justify-content: flex-start;
+    }
+
+    /* Hide the side menu since the full menu is visible */
+    .arrow {
+        position: absolute;
+    }
+    .side-menu {
+        display: none;
+    }
+}
