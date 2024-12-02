@@ -57,16 +57,44 @@ document.addEventListener("focusin", function(event) {
 });
 
 // JavaScript to toggle collapsible sections
+// document.addEventListener("DOMContentLoaded", () => {
+//     const cards = document.querySelectorAll(".card");
+  
+//     cards.forEach((card) => {
+//       const heading = card.querySelector("h3");
+  
+//       heading.addEventListener("click", () => {
+//         card.classList.toggle("active");
+//       });
+//     });
+//   });
+
 document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".card");
-  
-    cards.forEach((card) => {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
       const heading = card.querySelector("h3");
-  
-      heading.addEventListener("click", () => {
-        // Toggle the active class on the clicked card
-        card.classList.toggle("active");
+      // Make the heading focusable
+      heading.setAttribute("tabindex", "0");
+      heading.setAttribute("role", "button");
+      heading.setAttribute("aria-expanded", "false");
+
+      const toggleCard = () => {
+          const isActive = card.classList.toggle("active");
+          heading.setAttribute("aria-expanded", isActive.toString());
+      };
+
+      // Toggle on click
+      heading.addEventListener("click", toggleCard);
+
+      // Toggle on Enter or Space key
+      heading.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault(); // Prevent default scrolling behavior for Space
+              toggleCard();
+          }
       });
-    });
   });
+});
+
   
