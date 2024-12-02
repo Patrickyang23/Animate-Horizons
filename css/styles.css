@@ -5,67 +5,135 @@ body, h1, h2, h3, p, ul, li, a {
   box-sizing: border-box;
 }
 
+strong, b {
+  font-weight: bold;
+  color:#00bcd4;;
+}
+
+/* Skip link styles */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  text-align: center;
+  width: 60vw;
+  left: 50%;
+  transform:translateX(-50%);
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1000;  /* Ensures it's on top of other elements */
+  opacity: 0;  /* Initially invisible */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;  /* Smooth transitions */
+}
+.skip-link:focus {
+  top: 10px;  /* Move the link back into view */
+  opacity: 1;  /* Make it visible */
+  z-index: 1200
+}
+
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
   color: #fff;
-  background: linear-gradient(135deg, #ff7eb3, #8e44ad, #3498db);
+  background: linear-gradient(135deg, #0c1b80, #8e44ad, #1049a5);
   background-size: 400% 400%;
-  animation: backgroundAnimation 20s ease infinite;
+  animation: backgroundAnimation 10s ease infinite;
   line-height: 1.6;
+  position: relative;
+}
+
+/* Background Design */
+.home .background-decor .circle {
+  z-index: -1;
+  /* top: 0;
+  left: 0; */
+  /* width: 100%;
+  height: 100%; */
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(0px);
+  overflow: hidden; /* Ensures smooth edge cutoff */
+}
+
+.circle.one {
+  width: 400px;
+  height: 400px;
+  top: -190px;
+  left: -120px;
+}
+
+.circle.two {
+  width: 300px;
+  height: 300px;
+  top: 200px;
+  right: -150px;
+}
+
+.circle.three {
+  width: 400px;
+  height: 400px;
+  bottom: -180px;
+  left: -50px;
 }
 
 /* Navbar */
-.navbar {
-  height: 35px; /* Explicit height of the navbar */
-
+/* .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: rgba(0, 0, 0, 0.8);
-  position: sticky;
-  top: 0;
+  background: rgba(0, 0, 0);
   z-index: 1000;
-}
+} */
 
-.navbar .logo {
+.logo {
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.navbar nav ul {
+/* .navbar nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
-}
+} */
 
-.navbar nav ul li a {
+/* .navbar nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   transition: color 0.3s;
-}
+} */
 
-.navbar nav ul li a:hover {
+/* .navbar nav ul li a:hover {
   color: #f39c12;
-}
+} */
 
 /* Home Section */
-.icon-background .icon {
+.home .icon-background .icon {
+  position: fixed;
   font-size: 80px;
   color: rgba(255, 255, 255, 0.2); /* Transparent look */
-  position: absolute;
+  /* position: absolute; */
   animation: float 6s ease-in-out infinite;
 }
 
+.icon {
+  z-index: -1;
+}
+
 /* Specific Icon Positions */
-.icon:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
-.icon:nth-child(2) { top: 20%; left: 85%; animation-delay: 1s; }
-.icon:nth-child(3) { top: 30%; left: 45%; animation-delay: 2s; }
-.icon:nth-child(4) { top: 75%; left: 15%; animation-delay: 3s; }
-.icon:nth-child(5) { top: 80%; left: 75%; animation-delay: 4s; }
+.icon:nth-child(1) { top: 90px; left: 60px; animation-delay: 0s; }
+.icon:nth-child(2) { top: 300px; right: 20px; animation-delay: 1s; }
+.icon:nth-child(3) { bottom: 60px; left: 150px; animation-delay: 4s; }
 
 /* Icon Floating Animation */
 @keyframes float {
@@ -103,36 +171,13 @@ body {
   margin-bottom: 10px;
 }
 
-/* History Section */
-.history h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-.history article {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 800px;
-}
-
-.history article h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.history article p {
-  font-size: 1rem;
-  text-align: left;
-}
-
 /* Footer */
 footer {
+  font-size: 1.2rem;
   height: 35px;
   text-align: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0);
 }
 
 /* Background Animation */
@@ -140,4 +185,155 @@ footer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* History section */
+main {
+  padding: 20px;
+}
+
+main h2 {
+  text-align: center;
+  margin-top: 85px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/* Container for all cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row */
+  justify-content: center; /* Center the cards in the row */
+  gap: 20px; /* Add space between cards */
+  padding: 20px;
+}
+
+/* Individual cards */
+.card {
+  display: flex;
+  flex-direction: column; /* Default layout: column */
+  align-items: center; /* Center content initially */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease; /* Smooth transition for layout changes */
+  overflow-x: auto;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift the card slightly */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Increase shadow on hover */
+}
+
+/* When the card is active (expanded) */
+.card.active {
+  flex-direction: column;
+  width: 90vw; /* Expand width to 90% of viewport */
+  transition: all 0.3s ease; /* Smooth animation for expansion */
+  justify-content: flex-start; /* Align items to the left in expanded mode */
+}
+
+
+/* Image and heading container */
+.card.active .default-card:first-child {
+  flex: 0 0 250px; /* Fixed width for image and heading container */
+  display: flex;
+  flex-direction: column; /* Stack image and heading vertically */
+  align-items: center; /* Center content in this section */
+}
+
+.default-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Image container */
+.card figure {
+  flex: 0 0 100px; /* Fixed size for the image */
+  text-align: center;
+  margin: 0;
+}
+
+.card figure img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+}
+
+.card figure figcaption {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Heading below the image */
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 0 0; /* Position below the image */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for layout changes */
+}
+
+.card h4 {
+  color: #ffd700;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style: disc;
+  margin-left: 30px;
+  line-height: 2.5;
+  font-size: 1.2rem;
+}
+
+.card h3:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Highlight background on hover */
+  color: #333; /* Change text color on hover */
+}
+
+/* Expanded content section */
+.card .content {
+  display: none; /* Hidden by default */
+  flex: 1; /* Expandable content */
+  padding: 20px;
+  opacity: 0; /* Invisible initially */
+  text-align: left;
+  margin-left: 40px;
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.card.active .content {
+  display: block; /* Show content when active */
+  opacity: 1; /* Fade-in effect */
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 2.5;
+}
+
+/* Adjust for larger screens */
+@media (min-width: 768px) {
+  .card.active {
+    flex-direction: row; /* Change layout to row */
+    width: 90vw; /* Expand width to 80% of viewport */
+    transition: all 0.3s ease; /* Smooth animation for expansion */
+    justify-content: flex-start; /* Align items to the left in expanded mode */
+  }
 }

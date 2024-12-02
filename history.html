@@ -6,50 +6,171 @@
   <title>History of Animation - Animate Horizons</title>
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/lightbox.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Animate Horizons</div>
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="#genre">Genre</a></li>
-        <li><a href="#collection">Collection</a></li>
-      </ul>
+      <div class="hamburger" tabindex="0">&#9776;</div>  <!-- Hamburger icon (three lines) -->
+      <div class="logo">Animate Horizons</div>
+
+      <!-- Side menu for small screens (hidden by default) -->
+      <div class="side-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="genre.html">Genre</a></li>
+          <li><a href="collection.html">Collection</a></li>
+        </ul>
+      </div>
+      <div class="overlay"></div> <!-- Background overlay -->
+      
+      <div class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="genre.html">Genre</a></li>
+            <li><a href="collection.html">Collection</a></li>
+          </ul>
+      </div>
     </nav>
   </header>
 
-  <section class="history">
-    <h2>History of Animation Movies</h2>
-    <article>
-      <h3>Early Animation Devices (Pre-1900s)</h3>
-      <p>In this era, animation was in its most primitive form, characterized by mechanical devices like the zoetrope, phenakistoscope, and praxinoscope...</p>
-    </article>
-    <article>
-      <h3>Silent Era (1900-1920s)</h3>
-      <p>The silent era saw animation emerge as a recognized medium for storytelling and artistic experimentation...</p>
-    </article>
-    <article>
-      <h3>Golden Age of Animation (1930s-1950s)</h3>
-      <p>The Golden Age was marked by the rise of major studios like Walt Disney Productions, Warner Bros., and MGM...</p>
-    </article>
-    <article>
-      <h3>Post-War Era and Television Animation (1950s-1970s)</h3>
-      <p>With the advent of television, animation shifted towards shorter, cost-effective formats tailored for home viewing...</p>
-    </article>
-    <article>
-      <h3>Animation Renaissance (1980s-1990s)</h3>
-      <p>The Renaissance revitalized traditional animation through emotionally resonant storytelling and advancements in technology...</p>
-    </article>
-    <article>
-      <h3>Digital Era and Global Animation (2000s-Present)</h3>
-      <p>The digital era has been defined by CGI dominance and global collaboration...</p>
-    </article>
-  </section>
+  <main id="main-content">
+    <h2>History of Animation</h2>
+
+    <div class="card-container">
+      <!-- Early Animation Devices -->
+      <section class="card">
+        <div class="default-card">
+          <figure>
+            <a href="images/history/Two_girls_playing_with_zoetrope.jpg" id="lightbox-image" target="_blank" data-lightbox="animation" data-title="Two girls playing with zoetrope">
+              <img src="images/history/Two_girls_playing_with_zoetrope.jpg" alt="History of Animation Images">
+            </a>
+            <figcaption>Zoetrope</figcaption>
+          </figure>
+          <h3>Early Animation Devices (Pre-1900s)</h3>
+        </div>
+
+        <div class="content">
+          <p>In this era, animation was in its most primitive form, characterized by mechanical devices like the <b>zoetrope</b>, <b>phenakistoscope</b>, and <b>praxinoscope</b>. These inventions relied on sequential images to create the illusion of motion when spun or rotated. Animation at this stage was not yet tied to storytelling but rather to scientific curiosity and entertainment. Improvements came with the realization of how persistence of vision could simulate movement, laying the foundation for later cinematic breakthroughs. Key examples include early optical toys and devices that fascinated audiences by bringing static images to life, marking the very beginning of animated motion.</p>
+        </div>
+      </section>
+
+      <!-- Silent Era -->
+      <section class="card">
+        <div class="default-card">
+          <figure>
+            <a href="images/history/Humorous_Phases_of_Funny_Faces_1906_Poster.jpg" id="lightbox-image" target="_blank" data-lightbox="animation" data-title="Humorous Phases of Funny Faces">
+              <img src="images/history/Humorous_Phases_of_Funny_Faces_1906_Poster.jpg" alt="History of Animation Images">
+            </a>
+            <figcaption>Humorous Phases of Funny Faces<br>(1906)</figcaption>
+          </figure>
+          <h3>Silent Era (1900-1920s)</h3>
+        </div>
+
+        <div class="content">
+          <p>The silent era saw animation emerge as a recognized medium for storytelling and artistic experimentation. This period was defined by painstakingly hand-drawn films, often created by a single animator. A landmark work of the time was Winsor McCay’s <b>"Gertie the Dinosaur"</b> (1914), which introduced character-driven animation and interactivity, as McCay performed live alongside Gertie. Another notable work was Stuart Blackton’s <b>"Humorous Phases of Funny Faces"</b> (1906), often credited as the first animated film. The era’s major improvement was the development of cel animation, which streamlined production by allowing animators to separate character movements from static backgrounds, reducing workload and enabling more complex stories.</p>
+        </div>
+      </section>
+
+      <!-- Golden Age -->
+      <section class="card">
+        <div class="default-card">
+          <figure>
+            <a href="images/history/Steamboat_Willie_1928_Poster.jpg" id="lightbox-image" target="_blank" data-lightbox="animation" data-title="History of Animation Images">
+              <img src="images/history/Steamboat_Willie_1928_Poster.jpg" alt="Steamboat Willie">
+            </a>
+            <figcaption>Steamboat Willie<br>(1928)</figcaption>
+          </figure>
+          <h3>Golden Age of Animation (1930s-1950s)</h3>
+        </div>
+
+        <div class="content">
+          <p>The Golden Age was marked by the rise of major studios like Walt Disney Productions, Warner Bros., and MGM, which shaped animation into a mainstream art form. Walt Disney’s <b>"Steamboat Willie"</b> (1928) introduced synchronized sound, revolutionizing the medium and popularizing Mickey Mouse. This era reached its pinnacle with <b>"Snow White and the Seven Dwarfs"</b> (1937), the first full-length animated feature film, which blended compelling storytelling, rich characters, and innovative use of technicolor. Warner Bros. countered with shorts featuring now-iconic characters like Bugs Bunny and Daffy Duck, characterized by fast-paced humor and clever dialogue. The era’s advancements included the use of vibrant colors, synchronized soundtracks, and sophisticated character animation, establishing animation as a serious medium in cinema.</p>
+        </div>
+      </section>
+
+      <!-- Post-War Era -->
+      <section class="card">
+        <div class="default-card">
+          <figure>
+            <a href="images/history/Astro_Boy_1963_Poster.jpg" id="lightbox-image" target="_blank" data-lightbox="animation" data-title="History of Animation Images">
+              <img src="images/history/Astro_Boy_1963_Poster.jpg" alt="Astro Boy">
+            </a>
+            <figcaption>Astro Boy<br>(1963)</figcaption>
+          </figure>
+          <h3>Post-War Era and Television Animation (1950s-1970s)</h3>
+        </div>
+        
+        <div class="content">
+          <p>With the advent of television, animation shifted towards shorter, cost-effective formats tailored for home viewing. Shows like <b>"The Flintstones"</b> (1960) and <b>"Scooby-Doo"</b> (1969) brought animation into living rooms, emphasizing humor and relatability. Meanwhile, Japan’s animation industry, led by Osamu Tezuka’s <b>"Astro Boy"</b> (1963), introduced serialized storytelling and unique artistic styles, laying the groundwork for the global popularity of anime. This period also saw the rise of limited animation techniques, which reused frames and backgrounds to lower costs while maintaining visual appeal. Despite these constraints, the era produced beloved characters and long-lasting series that left a cultural impact.</p>
+        </div>
+      </section>
+
+      <!-- Animation Renaissance -->
+      <section class="card">
+        <div class="default-card">
+          <figure>
+            <a href="images/history/The_Little_Mermaid_1989_Poster.jpg" id="lightbox-image" target="_blank" data-lightbox="animation" data-title="History of Animation Images">
+              <img src="images/history/The_Little_Mermaid_1989_Poster.jpg" alt="The Little Mermaid">
+            </a>
+            <figcaption>The Little Mermaid<br>(1989)</figcaption>
+          </figure>
+          <h3>Animation Renaissance (1980s-1990s)</h3>
+        </div>
+
+        <div class="content">
+          <p>The Renaissance revitalized traditional animation through emotionally resonant storytelling and advancements in technology. Disney’s <b>"The Little Mermaid"</b> (1989) began a string of successful musicals, including <b>"Beauty and the Beast"</b> (1991) and <b>"The Lion King"</b> (1994), which combined traditional hand-drawn animation with emerging computer techniques. Meanwhile, Pixar debuted <b>"Toy Story"</b> (1995), the first fully CGI-animated feature film, which showcased the potential of computer-generated imagery in creating lifelike movement and textures. This era also saw the rise of international animation, with works like Studio Ghibli’s <b>"My Neighbor Totoro"</b> (1988) gaining global acclaim. The Renaissance’s innovations reinvigorated the industry and introduced new artistic possibilities.</p>
+        </div>
+      </section>
+
+      <!-- Digital Era -->
+      <section class="card">
+        <div class="default-card">
+          <figure>
+            <a href="images/history/Shrek_2001_Poster.jpg" id="lightbox-image" target="_blank" data-lightbox="animation" data-title="History of Animation Images">
+              <img src="images/history/Shrek_2001_Poster.jpg" alt="Shrek">
+            </a>
+            <figcaption>Shrek<br>(2001)</figcaption>
+          </figure>
+          <h3>Digital Era and Global Animation (2000s-Present)</h3>
+        </div>
+
+        <div class="content">
+          <p>The digital era has been defined by CGI dominance and global collaboration. Films like DreamWorks’ <b>"Shrek"</b> (2001), Pixar’s <b>"Finding Nemo"</b> (2003), and Disney’s <b>"Frozen"</b> (2013) exemplify the advancements in CGI technology, offering unprecedented realism and emotional depth. Japanese animation gained worldwide recognition with Studio Ghibli’s <b>"Spirited Away"</b> (2001), which won an Academy Award for Best Animated Feature. This era also saw the rise of streaming platforms, enabling diverse storytelling and styles to reach global audiences. Animation continues to push boundaries with motion capture, virtual reality, and AI-driven tools, cementing its role as a versatile and innovative medium for storytelling.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="default-card">
+          <figure>
+            <a href="images/history/Soul_2020_Poster.jpg" id="lightbox-image" target="_blank" data-lightbox="animation" data-title="History of Animation Images">
+              <img src="images/history/Soul_2020_Poster.jpg" alt="Shrek">
+            </a>
+            <figcaption>Soul<br>(2020)</figcaption>
+          </figure>
+          <h3>Modern Trends</h3>
+        </div>
+
+        <div class="content">
+          <p>Today, animation blends traditional techniques with cutting-edge technologies like virtual reality, AI-assisted animation, and real-time rendering engines. Streaming platforms have broadened the audience for animated films, while diverse genres and themes are now explored, from family-friendly stories like <b>"Soul"</b> (2020) to experimental works like <b>"Spider-Man: Into the Spider-Verse"</b> (2018), which used a groundbreaking visual style that combined hand-drawn and CGI techniques. Animation continues to evolve as a medium for artistic innovation and global storytelling.</p>
+        </div>
+      </section>
+    </div>
+  </main>
 
   <footer>
     <p>&copy; 2024 Animate Horizons. All rights reserved.</p>
   </footer>
+
+  <!-- Link JavaScript file -->
+  <script src="js/styles.js"></script>
+  <script src="js/lightbox-plus-jquery.js"></script>
+
 </body>
 </html>
