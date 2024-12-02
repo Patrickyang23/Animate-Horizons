@@ -79,43 +79,11 @@ body {
   left: -50px;
 }
 
-/* Navbar */
-/* .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 35px; 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: rgba(0, 0, 0);
-  z-index: 1000;
-} */
-
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-
-/* .navbar nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-} */
-
-/* .navbar nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: color 0.3s;
-} */
-
-/* .navbar nav ul li a:hover {
-  color: #f39c12;
-} */
 
 /* Home Section */
 .home .icon-background .icon {
@@ -151,7 +119,7 @@ body {
 }
 
 .home {
-  height: calc(100vh - 35px); /* Subtract the header's height */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
